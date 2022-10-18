@@ -1,0 +1,133 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Growth Rate and Population",
+    "data": {
+      "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/world_population.csv"
+    },
+    "params": [
+      {
+        "name": "Continent_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "North America",
+            "South America",
+            "Europe",
+            "Africa",
+            "Asia",
+            "Oceania"
+          ],
+          "labels": [
+            "Show All",
+            "North America",
+            "South America",
+            "Europe",
+            "Africa",
+            "Asia",
+            "Oceania"
+          ],
+          "name": "Continent Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "2022 Population",
+        "type": "quantitative",
+        "title": "2022 Population",
+        "axis": {"tickCount": 5},
+        "scale": {"type": "log", "domain": [100, 3000000000]}
+      },
+      "y": {
+        "field": "Growth Rate",
+        "type": "quantitative",
+        "title": "Growth Rate in 2022",
+        "axis": {"tickCount": 6},
+        "scale": {"type": "linear", "domain": [0.905, 1.075]}
+      }
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "2022 Population",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [50000, 500000, 5000000, 50000000, 100000000],
+              "range": [20, 40, 80, 160, 200, 640]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {
+            "field": "Continent",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "North America",
+                "South America",
+                "Europe",
+                "Africa",
+                "Asia",
+                "Oceania"
+              ],
+              "range": [
+                "#FF2400",
+                "#EEEE00",
+                "#ff7f00",
+                "#8B1A1A",
+                "#B452CD",
+                "#8DEEEE"
+              ]
+            }
+          },
+          "opacity": {"value": 0.5},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "2022 Population", "type": "quantitative", "format": ","},
+            {"field": "Rank", "type": "quantitative", "format": ","},
+            {"field": "Growth Rate", "type": "quantitative", "format": ","},
+            {"field": "Area (km²)", "type": "quantitative", "format": ","},
+            {"field": "World Population Percentage", "type": "quantitative", "format": ","}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 14,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "text": {"field": "Country", "type": "nominal"},
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Country'] == 'China' || datum['Country'] == 'India' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Ukraine' || datum['Country'] == 'Moldova' ||  datum['Country'] == 'United States'||  datum['Country'] == 'Australia'||  datum['Country'] == 'Japan'",
+              "value": 0.8
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "2022 Population", "type": "quantitative", "format": ","},
+            {"field": "Growth Rate", "type": "quantitative", "format": ","},
+            {"field": "Area (km²)", "type": "quantitative", "format": ","},
+            {"field": "World Population Percentage", "type": "quantitative", "format": ","}
+          ]
+        }
+      }
+    ]
+  }

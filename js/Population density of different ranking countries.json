@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height":"container",
+    "width":"container",
+    "title": {
+        "text": "Population Density of Different Ranking Countries",
+        "color": "black",
+        "fontSize":16
+      },
+    "data": {
+        "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/world_population.csv"
+      },
+     "params": [
+       {
+    "name": "Rank_Below",
+    "value": 7,
+    "bind": {
+    "input": "range",
+    "min": 1,
+    "max": 20,
+    "step": 1,
+    "name": "Population Rank Below: "
+            }
+        }
+     ], 
+      "transform": [
+        {"filter":"datum.Rank < Rank_Below"}
+      ],
+    "layer": [{
+      "mark": {"type": "arc", "innerRadius": 50, "stroke": "#c7c7c7"}
+    },{
+      "mark": {"type": "text", "radiusOffset": 50,"fontSize":14},
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"}
+      }
+    }],
+    "encoding": {
+      "theta": {"field": "Density (per km²)", "type": "quantitative", "stack": true},
+      "radius": {"field": "Density (per km²)", "scale": {"type": "log", "zero": true, "rangeMin": 40}},
+      "color": {"field": "Country", "type": "nominal", "legend": null},
+      "tooltip":[
+        {"field": "Country", "type": "nominal"},
+        {"field": "World Population Percentage", "type": "quantitative"},
+        {"field": "Area (km²)", "type": "quantitative"},
+        {"field": "Density (per km²)", "type": "quantitative"}
+      ]
+    }
+  }

@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Percentage of women in the Top 10 countries by year",
+      "color": "black"
+    },
+    "width": "container",
+    "height": 400,
+    "params": [
+      {
+        "name": "Country_Selection",
+        "bind":{
+          "input": "select",
+          "options":["China","India","United States","Indonesia","Pakistan","Nigeria","Brazil","Bangladesh","Mexico","Japan"],
+          "labels": ["China","India","United States","Indonesia","Pakistan","Nigeria","Brazil","Bangladesh","Mexico","Japan"],
+          "name": "Countries Selection"
+        }
+      }
+    ],
+    "data": {
+      "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/population_female_percentage_long.csv"
+    },
+    "transform": [
+      {"filter":"Country_Selection == [null] || datum['Country Name'] == Country_Selection"}
+    ],
+    "layer": [
+      {
+        "mark": {"type": "line"},
+        "encoding": {
+          "y": {
+            "field":"Count",
+            "type": "quantitative",
+            "title":"Female Percentage",  
+            "axis":{"tickCount":20},
+            "scale":{"type": "linear","domain":[45,55]}
+            },
+          "x": {
+            "timeUnit":"year",
+            "field": "Year",
+            "type": "temporal",
+            "axis":{"format":"%Y"}
+            },
+          "tooltip":[
+            {"field":"Country Name","type": "nominal","title":"Country Name"},
+            {"field":"Year","type": "temporal","title":"Year"},
+            {"field":"Count","type": "quantitative","title":"Female Percentage"}
+          ]
+        }
+      }
+    ],
+    "config": {
+      "text": {"fontWeight": "normal"},
+      "title": {"font": "sans-serif", "fontSize": 16},
+      "view": {"stroke": ""}
+    }
+  }
