@@ -4,7 +4,7 @@
     "height": 400,
     "title": "Growth Rate and Population",
     "data": {
-      "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/world_population.csv"
+      "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/data/world_population.csv"
     },
     "params": [
       {
