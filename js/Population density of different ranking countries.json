@@ -1,14 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height":"container",
-    "width":"container",
+    "height":600,
+    "width":400,
     "title": {
         "text": "Population Density of Different Ranking Countries",
         "color": "black",
         "fontSize":16
       },
     "data": {
-        "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/world_population.csv"
+        "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/data/world_population.csv"
       },
      "params": [
        {
