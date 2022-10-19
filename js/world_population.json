@@ -4,7 +4,7 @@
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/ne_110m.topojson",
+    "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/data/ne_110m.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
@@ -12,7 +12,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/world_population.csv"},
+          "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/data/world_population.csv"},
         "key": "Country",
         "fields": ["2022 Population","Rank","Capital","Continent"]
       }
