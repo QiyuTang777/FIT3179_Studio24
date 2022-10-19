@@ -11,9 +11,11 @@
     
     <script src ="js/vega_lite_assignment2.js"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     
-    <link href = "css/styles.css" rel = "stylesheet">
+    <link href = "css/layout.css" rel = "stylesheet">
 
 
 </head>
@@ -33,15 +35,15 @@ body {
 
 img {
     width: auto;
-    height: 400px;
-    margin: 10% auto;
+    height: 500px;
+    margin: 5% auto;
     text-align: center;
 }
 
 h1 {
     text-align: center; 
-    padding: 30px; 
-    font-size: 40px; 
+    padding: 5%; 
+    font-size: 60px; 
     font-weight: bold; 
     margin: 20px 10% 20px 10%;
 }
@@ -64,7 +66,7 @@ p {
 
 div {
     text-align: center;
-    margin: 20px auto 20px auto;
+    margin: 20px auto 10px auto;
 }
 
 </style>
@@ -78,7 +80,7 @@ div {
         <div>
             <img src="https://images.theconversation.com/files/286614/original/file-20190801-169696-2nvbgb.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="">
         </div>
-        <h2>Overview</h2>
+        <h2>- Overview -</h2>
         <p>
             Each of us lives on the same earth, so changes in the population of different countries will have a certain impact on other countries, 
             especially those with large populations.
@@ -87,35 +89,78 @@ div {
             Today in 2022, many countries have begun to care about the problems that may arise from population growth issues, 
             such as environmental pollution, food shortages, and gender issues, <strong>most of which are likely to related to the country's demographic characteristics</strong>.
         </p>
-        <p style="color: rgb(104, 104, 104);">
-            This visualization will focus on the different dimensions of the population of countries in the world today
+        <p style="color: rgb(216, 89, 4);">
+            This visualization will focus on the different dimensions of the population of countries in the world today.
+            <br>
+            <br>
         </p>
     </div>
 
     <div id = "Outer">
-        <h2>Population</h2>
+        <h2>- Population -</h2>
         <div id = "world_map"></div>
         <p>
-            Through this visual population map, China currently ranks first in population
+            Through this visual population map, China currently ranks first in population.
+            Most of the most populous countries are located in East Asia, South Asia, and Indonesia.
+            <br>
+            <br>
+            <strong>Overall, Asian countries account for a relatively high proportion of the world's population.</strong>
+            <br>
+            <br>
         </p>
     </div>
 
     <div id = "Outer">
-        <h2>Introduction</h2>
+        <h2>- Growth Rate -</h2>
         <div id = "growth_rate"></div>
-        <p style="color: rgb(255, 196, 0);">Test</p>
+        <p>
+            From a growth rate perspective, the most obvious of these are the two population superpowers, India and China.
+            Although both countries have populations of more than one billion, India's population growth rate is still higher than China's.
+            This may bring more demographic benefits to India in the future, but it also needs to bear the burden of population.
+            <br>
+            <br>
+            Two more special points are <strong>Moldova and Ukraine</strong> : Although located in Europe, Moldova is still a developing country and the second poorest country in Europe. 
+            The relatively backward economy and national culture may be the reason why Moldova's population growth rate is so high.
+            <br>
+            <br>
+            Ukraine, on the other hand, is undergoing war, and the high population outflow for many years has made Ukraine's population growth rate relatively low.
+            <br>
+            <br>
+        </p>
     </div>
 
     <div id = "Outer">
-        <h2>Introduction</h2>
+        <h2>- Density -</h2>
         <div id = "density"></div>
-        <p style="color: rgb(255, 196, 0);">Test</p>
+        <p>
+            By sorting through countries of different rankings, 
+            we found that among the top five countries in terms of population, 
+            India has a significantly higher population density than the rest.
+            Also a large country with a population of more than one billion, 
+            India's population density is nearly three times that of China.
+            <br>
+            <br>
+            When the ranking became the top ten countries by population, 
+            Bangladesh surpassed India to become the country with the highest population density.
+            This 147,570 square kilometers of land carries about 168 million people, and the population density is nearly three times that of neighboring India. 
+            The population density is too high and the per capita GDP is less than 1,700 US dollars.
+
+        </p>
     </div>
 
     <div id = "Outer">
-        <h2>Introduction</h2>
+        <h2>- Trend of Female Percentage -</h2>
         <div id = "female_percentage"></div>
-        <p style="color: rgb(255, 196, 0);">Test</p>
+        <p>
+            By looking at the percentage of female population in the top ten countries by population in the world over the years, 
+            we found that the percentage of female population in most countries increased after 1960.
+            There are also countries, such as Indonesia, where the percentage of female population has dropped by one percentage point, 
+            which may be related to historical events in these countries through the time observed in the chart.
+            <br>
+            <br>
+        </p>
+        <img src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A230dd95d2076223ab9b3f5667ba26241e904a5cea9a301fee62c9ddd%2BIMAGE_TINY%2BIMAGE_TINY.1" alt="">
     </div>
+
 </body>
 </html>

@@ -1,42 +1,41 @@
-#symbol_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
-}
-
 .head_text { font-size: 28px; font-weight: bold; }
 
  #world_map{
     text-align: center;
  }
 
- #Highlight {
-	color: rgb(255, 208, 0) ;
-	font-weight: bold;
-  }
  
-h1 {text-align: center; padding: 50px; 
+h1 {
+    text-align: center; padding: 50px; 
     font-size: 40px; font-weight: bold; 
     margin: 50px 100px 50px 100px ;
+    font-family:'Open Sans';
 }
 
 h2 {
-    text-align: center;padding-top: 20px;
+    text-align: center;
+    padding-top: 15px;
     align-items:center;
     margin: auto 100px;
 }
 
-p {text-align: center; padding-top:20px ;padding-bottom:15px ; align-items: center;margin: auto;
+p {
+    text-align: center; 
+    padding-top:15px ;
+    padding-bottom:15px ; 
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 18px;
+    font-family:'Open Sans';
+
 }
 
 div {
-    align-items:center; 
-    margin: auto 100px;
-    margin-bottom: 50px;
+    text-align:center; 
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
