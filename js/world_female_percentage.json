@@ -18,7 +18,7 @@
       }
     ],
     "data": {
-      "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/population_female_percentage_long.csv"
+      "url": "https://raw.githubusercontent.com/QiyuTang777/FIT3179_Studio24/main/data/population_female_percentage_long.csv"
     },
     "transform": [
       {"filter":"Country_Selection == [null] || datum['Country Name'] == Country_Selection"}
