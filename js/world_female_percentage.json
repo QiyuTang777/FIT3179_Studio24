@@ -4,8 +4,8 @@
       "text": "Percentage of women in the Top 10 countries by year",
       "color": "black"
     },
-    "width": 400,
-    "height": 300,
+    "width": 200,
+    "height": 150,
     "params": [
       {
         "name": "Country_Selection",
